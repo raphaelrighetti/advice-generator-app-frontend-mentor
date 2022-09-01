@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+
+:root {
+  /* Primary */
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --darker-blue: hsl(217, 24%, 15%);
+  --darkest-blue: hsl(218, 23%, 14%);
+
+  /* Typography */
+  --quote-font-size: 20px;
+
+  /* General Font */
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+}
+
+.advice-div {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(10, 10%);
+  width: 30%;
+  height: 35%;
+  padding: 2rem 2rem 0 2rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  background-color: var(--dark-grayish-blue);
+  box-shadow: .5rem .5rem 0 var(--darkest-blue), 1rem 1rem 0 var(--darker-blue);
+}
+
+/* .advice-title, .advice, .advice-pattern-divider, .advice-button {
+  grid-column: 2 / 2;
+} */
+
+.advice-title {
+  grid-row: 1 / 1;
+  margin-top: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .25rem;
+  font-size: .85rem;
+  color: var(--neon-green);
+}
+
+.advice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 3 / 7;
+  font-size: var(--quote-font-size);
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  color: var(--light-cyan);
+}
+
+.advice-pattern-divider {
+  grid-row: 8 / 9;
+  width: 100%;
+  height: 50%;
+  margin-top: .5rem;
+}
+
+.advice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 10 / 10;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10rem;
+  background-color: var(--neon-green);
+  transition: 200ms;
+}
+
+.advice-button:hover {
+  box-shadow: 0 0 1.25rem rgba(82, 255, 168, 25%);
+}
+
+/* .advice-button-image {
+
+} */
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 11px; text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 820px) {
+  .advice-div {
+    width: 70%;
+    height: 35%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .advice-div {
+    width: 90%;
+    height: 35%;
+  }
+}
