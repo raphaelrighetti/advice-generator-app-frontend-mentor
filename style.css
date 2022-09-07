@@ -29,6 +29,11 @@ body {
   background-color: var(--dark-blue);
 }
 
+h1 { 
+  position:absolute; 
+  visibility: hidden;
+}
+
 .advice-div {
   display: grid;
   grid-template-columns: 100%;
